@@ -11,6 +11,7 @@
       font-family: Arial, sans-serif;
       background: black;
       color: white;
+      height: 100%;
     }
 
     canvas {
@@ -18,14 +19,13 @@
       top: 0;
       left: 0;
       z-index: -1;
+      display: block;
     }
 
     #overlay {
-      position: absolute;
-      top: 10%;
-      left: 50%;
-      transform: translateX(-50%);
+      position: relative;
       text-align: center;
+      padding: 40px;
     }
 
     #overlay h1 {
@@ -128,7 +128,7 @@
     scene.add(pointLight);
 
     // Camera position
-    camera.position.z = 40;
+    camera.position.z = 50;
 
     // Animation loop
     function animate() {
